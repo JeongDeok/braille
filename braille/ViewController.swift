@@ -11,105 +11,122 @@ import AVFoundation
 
 class ViewController: UIViewController {
     
+    var lastTouch: Int = -1
+    //마지막으로 터치한 칸 번호
     var strIdx: Int = 0
     // 현재 읽고 있는 점자의 인덱스
     var brlnumArr: [String] = []
     // 점자 번호 이진수로 갖고있는 배열 ex) ["100011", "010010", "001001", "101100", "000000"]
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        // 터치가 시작 될 때 좌표 GCPoint로 얻어오는 함수
+        let touch = touches.first!
+        let point = touch.location(in: touch.view)
+        if brlnumArr.count == 0 { return }
+        if 175 < point.x && point.x < 275{
+            if 500 < point.y && point.y < 600 {
+                if brlnumArr[strIdx].getChar(at: 0) == "1"{
+                    UIDevice.vibrate()
+                    print("1")
+                }
+                lastTouch = 0
+            }
+            else if 600 < point.y && point.y < 700{
+                if brlnumArr[strIdx].getChar(at: 1) == "1"{
+                    UIDevice.vibrate()
+                    print("2")
+                }
+                lastTouch = 1
+            }
+            else if 700 < point.y && point.y < 800{
+                if brlnumArr[strIdx].getChar(at: 2) == "1"{
+                    UIDevice.vibrate()
+                    print("3")
+                }
+                lastTouch = 2
+            }
+        }
+        else if 275 < point.x && point.x < 375{
+            if 500 < point.y && point.y < 600 {
+                if brlnumArr[strIdx].getChar(at: 3) == "1"{
+                    UIDevice.vibrate()
+                    print("4")
+                    lastTouch = 3
+                }
+            }
+            else if 600 < point.y && point.y < 700{
+                if brlnumArr[strIdx].getChar(at: 4) == "1"{
+                    UIDevice.vibrate()
+                    print("5")
+                }
+                lastTouch = 4
+            }
+            else if 700 < point.y && point.y < 800{
+                if brlnumArr[strIdx].getChar(at: 5) == "1"{
+                    UIDevice.vibrate()
+                    print("6")
+                }
+                lastTouch = 5
+            }
+        }
+    }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         // 터치한 상태에서 움직일 때마다 좌표 GCPoint로 얻어오는 함수
         let touch = touches.first!
         let point = touch.location(in: touch.view)
         
-        
+        if brlnumArr.count == 0 { return }
         if 175 < point.x && point.x < 275{
             if 500 < point.y && point.y < 600 {
-                if brlnumArr[strIdx].getChar(at: 0) == "1"{
+                if brlnumArr[strIdx].getChar(at: 0) == "1" && lastTouch != 0{
                     UIDevice.vibrate()
                     print("1")
                 }
+                lastTouch = 0
             }
             else if 600 < point.y && point.y < 700{
-                if brlnumArr[strIdx].getChar(at: 1) == "1"{
+                if brlnumArr[strIdx].getChar(at: 1) == "1" && lastTouch != 1{
                     UIDevice.vibrate()
                     print("2")
                 }
+                lastTouch = 1
             }
             else if 700 < point.y && point.y < 800{
-                if brlnumArr[strIdx].getChar(at: 2) == "1"{
+                if brlnumArr[strIdx].getChar(at: 2) == "1" && lastTouch != 2{
                     UIDevice.vibrate()
                     print("3")
                 }
+                lastTouch = 2
             }
         }
         else if 275 < point.x && point.x < 375{
             if 500 < point.y && point.y < 600 {
-                if brlnumArr[strIdx].getChar(at: 3) == "1"{
+                if brlnumArr[strIdx].getChar(at: 3) == "1" && lastTouch != 3{
                     UIDevice.vibrate()
                     print("4")
                 }
+                lastTouch = 3
             }
             else if 600 < point.y && point.y < 700{
-                if brlnumArr[strIdx].getChar(at: 4) == "1"{
+                if brlnumArr[strIdx].getChar(at: 4) == "1" && lastTouch != 4{
                     UIDevice.vibrate()
                     print("5")
                 }
+                lastTouch = 4
             }
             else if 700 < point.y && point.y < 800{
-                if brlnumArr[strIdx].getChar(at: 5) == "1"{
+                if brlnumArr[strIdx].getChar(at: 5) == "1" && lastTouch != 5{
                     UIDevice.vibrate()
                     print("6")
                 }
+                lastTouch = 5
             }
         }
         
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        // 터치가 시작 될 때 좌표 GCPoint로 얻어오는 함수
-        let touch = touches.first!
-        let point = touch.location(in: touch.view)
-        if 175 < point.x && point.x < 275{
-            if 500 < point.y && point.y < 600 {
-                if brlnumArr[strIdx].getChar(at: 0) == "1"{
-                    UIDevice.vibrate()
-                    print("1")
-                }
-            }
-            else if 600 < point.y && point.y < 700{
-                if brlnumArr[strIdx].getChar(at: 1) == "1"{
-                    UIDevice.vibrate()
-                    print("2")
-                }
-            }
-            else if 700 < point.y && point.y < 800{
-                if brlnumArr[strIdx].getChar(at: 2) == "1"{
-                    UIDevice.vibrate()
-                    print("3")
-                }
-            }
-        }
-        else if 275 < point.x && point.x < 375{
-            if 500 < point.y && point.y < 600 {
-                if brlnumArr[strIdx].getChar(at: 3) == "1"{
-                    UIDevice.vibrate()
-                    print("4")
-                }
-            }
-            else if 600 < point.y && point.y < 700{
-                if brlnumArr[strIdx].getChar(at: 4) == "1"{
-                    UIDevice.vibrate()
-                    print("5")
-                }
-            }
-            else if 700 < point.y && point.y < 800{
-                if brlnumArr[strIdx].getChar(at: 5) == "1"{
-                    UIDevice.vibrate()
-                    print("6")
-                }
-            }
-        }
-    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
