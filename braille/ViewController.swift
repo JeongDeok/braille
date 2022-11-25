@@ -11,18 +11,19 @@ import KorToBraille
 class ViewController: UIViewController {
     @IBOutlet var text: UITextField!
     @IBOutlet var result: UILabel!
-    
+    var brlnumArr: [Int] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+    
 
     @IBAction func convert(_ sender: Any) {
-        var str:String = text.text!
+        var str: String = text.text!
         var rValue:String = ""
         let cnt:Int = str.count
         for i in 0..<cnt{
-            let char:Character = str[str.index(str.startIndex, offsetBy: i)]
+            let char:Character = str.getChar(at: i)
             switch char {
             case "a":rValue.append("⠁")
             case "b":rValue.append("⠃")
@@ -59,8 +60,34 @@ class ViewController: UIViewController {
         }
         
         result.text = rValue
+        print(rValue)
+        brlnumArr = brailleTo2D(brlStr: rValue)
+        print(brlnumArr)
     }
     
+    func brailleTo2D (brlStr bs: String) -> [Int] {
+
+        var brlNUmArr: [Int] = []
+        var brl: [Character] = ["⠀","⠁","⠂","⠃","⠄","⠅","⠆","⠇","⠈","⠉","⠊","⠋","⠌","⠍","⠎","⠏","⠐","⠑","⠒","⠓","⠔","⠕","⠖","⠗","⠘","⠙","⠚","⠛","⠜","⠝","⠞","⠟","⠠","⠡","⠢","⠣","⠤","⠥","⠦","⠧","⠨","⠩","⠪","⠫","⠬","⠭","⠮","⠯","⠰","⠱","⠲","⠳","⠴","⠵","⠶","⠷","⠸","⠹","⠺","⠻","⠼","⠽","⠾","⠿"]
+        
+
+        for i in 0..<bs.count{
+            
+            let char: Character = bs.getChar(at: i)
+            if let firstIndex = brl.firstIndex(of: char) {
+                brlNUmArr.append(firstIndex)
+            }
+            // Char Arr에서 찾은 인덱스를 brlNumArr에 추가
+            
+        }
+        return brlNUmArr
+    }
     
 }
 
+
+extension String {
+    func getChar(at index: Int) -> Character {
+        return self[self.index(self.startIndex, offsetBy: index)]
+    }
+}
