@@ -17,28 +17,39 @@ class ViewController: UIViewController {
     // 현재 읽고 있는 점자의 인덱스
     var brlnumArr: [String] = []
     // 점자 번호 이진수로 갖고있는 배열 ex) ["100011", "010010", "001001", "101100", "000000"]
+    @IBOutlet var text: UITextField!
+    // 텍스트 입력하는 필드
+    @IBOutlet var result: UILabel!
+    // 결과 출력하는 라벨
     
+    @IBOutlet var dot0: UIImageView!
+    @IBOutlet var dot1: UIImageView!
+    @IBOutlet var dot2: UIImageView!
+    @IBOutlet var dot3: UIImageView!
+    @IBOutlet var dot4: UIImageView!
+    @IBOutlet var dot5: UIImageView!
+
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         // 터치가 시작 될 때 좌표 GCPoint로 얻어오는 함수
         let touch = touches.first!
         let point = touch.location(in: touch.view)
         if brlnumArr.count == 0 { return }
-        if 175 < point.x && point.x < 275{
-            if 500 < point.y && point.y < 600 {
+        if dot0.frame.origin.x < point.x && point.x < dot0.frame.origin.x + dot0.frame.width{
+            if dot0.frame.origin.y < point.y && point.y < dot0.frame.origin.y + dot0.frame.height {
                 if brlnumArr[strIdx].getChar(at: 0) == "1"{
                     UIDevice.vibrate()
                     print("1")
                 }
                 lastTouch = 0
             }
-            else if 600 < point.y && point.y < 700{
+            else if dot1.frame.origin.y < point.y && point.y < dot1.frame.origin.y + dot1.frame.height{
                 if brlnumArr[strIdx].getChar(at: 1) == "1"{
                     UIDevice.vibrate()
                     print("2")
                 }
                 lastTouch = 1
             }
-            else if 700 < point.y && point.y < 800{
+            else if dot2.frame.origin.y < point.y && point.y < dot2.frame.origin.y + dot2.frame.height{
                 if brlnumArr[strIdx].getChar(at: 2) == "1"{
                     UIDevice.vibrate()
                     print("3")
@@ -46,22 +57,22 @@ class ViewController: UIViewController {
                 lastTouch = 2
             }
         }
-        else if 275 < point.x && point.x < 375{
-            if 500 < point.y && point.y < 600 {
+        else if dot3.frame.origin.x < point.x && point.x < dot3.frame.origin.x + dot3.frame.width{
+            if dot3.frame.origin.y < point.y && point.y < dot3.frame.origin.y + dot1.frame.height {
                 if brlnumArr[strIdx].getChar(at: 3) == "1"{
                     UIDevice.vibrate()
                     print("4")
                     lastTouch = 3
                 }
             }
-            else if 600 < point.y && point.y < 700{
+            else if dot4.frame.origin.y < point.y && point.y < dot4.frame.origin.y + dot4.frame.height{
                 if brlnumArr[strIdx].getChar(at: 4) == "1"{
                     UIDevice.vibrate()
                     print("5")
                 }
                 lastTouch = 4
             }
-            else if 700 < point.y && point.y < 800{
+            else if dot5.frame.origin.y < point.y && point.y < dot5.frame.origin.y + dot5.frame.height{
                 if brlnumArr[strIdx].getChar(at: 5) == "1"{
                     UIDevice.vibrate()
                     print("6")
@@ -136,9 +147,7 @@ class ViewController: UIViewController {
     
 
     
-    @IBOutlet var text: UITextField!
-    @IBOutlet var result: UILabel!
-    
+
     
     @IBAction func forward(_ sender: Any) {
 
@@ -152,7 +161,7 @@ class ViewController: UIViewController {
     
     @IBAction func backward(_ sender: Any) {
 
-        if 1 < strIdx{
+        if 0 < strIdx{
             UIDevice.vibrate()
             strIdx -= 1
             // 표시되는 점자 변경
@@ -169,7 +178,7 @@ class ViewController: UIViewController {
         // 반환할 점자 스트링
         
         strIdx = 0
-        // 새로운 str 들어와서 초기화 해줘야함
+        // 새로운 str 들어와서 strIdx 초기화 해줘야함
         
         for i in 0..<str.count{
             let char:Character = str.getChar(at: i)
