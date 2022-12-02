@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A9A91392936E9E900A101C4 /* braille_watchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9A91382936E9E900A101C4 /* braille_watchApp.swift */; };
+		2A9A913B2936E9E900A101C4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9A913A2936E9E900A101C4 /* ContentView.swift */; };
+		2A9A913D2936E9EA00A101C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A9A913C2936E9EA00A101C4 /* Assets.xcassets */; };
+		2A9A91402936E9EA00A101C4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A9A913F2936E9EA00A101C4 /* Preview Assets.xcassets */; };
 		2AB01DB9287EA53E00F7D27E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB01DB8287EA53E00F7D27E /* AppDelegate.swift */; };
 		2AB01DBB287EA53E00F7D27E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB01DBA287EA53E00F7D27E /* SceneDelegate.swift */; };
 		2AB01DBD287EA53E00F7D27E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB01DBC287EA53E00F7D27E /* ViewController.swift */; };
@@ -17,6 +21,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A9A91362936E9E900A101C4 /* braille watch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "braille watch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A9A91382936E9E900A101C4 /* braille_watchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = braille_watchApp.swift; sourceTree = "<group>"; };
+		2A9A913A2936E9E900A101C4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2A9A913C2936E9EA00A101C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2A9A913F2936E9EA00A101C4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2AB01DB5287EA53E00F7D27E /* braille.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = braille.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AB01DB8287EA53E00F7D27E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2AB01DBA287EA53E00F7D27E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -28,6 +37,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2A9A91332936E9E900A101C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2AB01DB2287EA53E00F7D27E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -39,10 +55,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A9A91372936E9E900A101C4 /* braille watch Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				2A9A91382936E9E900A101C4 /* braille_watchApp.swift */,
+				2A9A913A2936E9E900A101C4 /* ContentView.swift */,
+				2A9A913C2936E9EA00A101C4 /* Assets.xcassets */,
+				2A9A913E2936E9EA00A101C4 /* Preview Content */,
+			);
+			path = "braille watch Watch App";
+			sourceTree = "<group>";
+		};
+		2A9A913E2936E9EA00A101C4 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				2A9A913F2936E9EA00A101C4 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 		2AB01DAC287EA53E00F7D27E = {
 			isa = PBXGroup;
 			children = (
 				2AB01DB7287EA53E00F7D27E /* braille */,
+				2A9A91372936E9E900A101C4 /* braille watch Watch App */,
 				2AB01DB6287EA53E00F7D27E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -51,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				2AB01DB5287EA53E00F7D27E /* braille.app */,
+				2A9A91362936E9E900A101C4 /* braille watch Watch App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -72,6 +109,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		2A9A91352936E9E900A101C4 /* braille watch Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2A9A91432936E9EA00A101C4 /* Build configuration list for PBXNativeTarget "braille watch Watch App" */;
+			buildPhases = (
+				2A9A91322936E9E900A101C4 /* Sources */,
+				2A9A91332936E9E900A101C4 /* Frameworks */,
+				2A9A91342936E9E900A101C4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "braille watch Watch App";
+			productName = "braille watch Watch App";
+			productReference = 2A9A91362936E9E900A101C4 /* braille watch Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
 		2AB01DB4287EA53E00F7D27E /* braille */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2AB01DC9287EA54000F7D27E /* Build configuration list for PBXNativeTarget "braille" */;
@@ -99,9 +153,12 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1340;
+				LastSwiftUpdateCheck = 1410;
 				LastUpgradeCheck = 1340;
 				TargetAttributes = {
+					2A9A91352936E9E900A101C4 = {
+						CreatedOnToolsVersion = 14.1;
+					};
 					2AB01DB4287EA53E00F7D27E = {
 						CreatedOnToolsVersion = 13.4.1;
 					};
@@ -124,11 +181,21 @@
 			projectRoot = "";
 			targets = (
 				2AB01DB4287EA53E00F7D27E /* braille */,
+				2A9A91352936E9E900A101C4 /* braille watch Watch App */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		2A9A91342936E9E900A101C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A9A91402936E9EA00A101C4 /* Preview Assets.xcassets in Resources */,
+				2A9A913D2936E9EA00A101C4 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2AB01DB3287EA53E00F7D27E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -142,6 +209,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		2A9A91322936E9E900A101C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A9A913B2936E9E900A101C4 /* ContentView.swift in Sources */,
+				2A9A91392936E9E900A101C4 /* braille_watchApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2AB01DB1287EA53E00F7D27E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -174,6 +250,68 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		2A9A91412936E9EA00A101C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"braille watch Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = 39JATSZXJT;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "braille watch";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = .watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Debug;
+		};
+		2A9A91422936E9EA00A101C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"braille watch Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = 39JATSZXJT;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "braille watch";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = .watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Release;
+		};
 		2AB01DC7287EA54000F7D27E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -347,6 +485,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2A9A91432936E9EA00A101C4 /* Build configuration list for PBXNativeTarget "braille watch Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A9A91412936E9EA00A101C4 /* Debug */,
+				2A9A91422936E9EA00A101C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2AB01DB0287EA53E00F7D27E /* Build configuration list for PBXProject "braille" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
